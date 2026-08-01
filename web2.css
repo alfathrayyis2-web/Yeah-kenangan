@@ -1,0 +1,623 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+  background: radial-gradient(circle at top, #1b0d1f, #09050c);
+  min-height: 100vh;
+  color: #fff;
+  overflow-x: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 150px;
+}
+
+
+/* Popup */
+.popup{
+    position: fixed;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    background:#1a0d1f;
+    padding:8px 18px;
+    border-radius:30px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    box-shadow:0 0 20px rgba(255,79,154,.6);
+    animation: slideDown 1.2s ease forwards;
+    z-index:9999;
+    white-space: nowrap;
+    justify-content:center;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Animasi slide */
+@keyframes slideDown{
+    to{
+        top:20px;
+    }
+}
+
+/* Icon Musik */
+.popup-icon{
+    font-size:18px;
+    color:#ff4f9a;
+    filter: drop-shadow(0 0 6px #ff4f9a);
+}
+
+/* Teks */
+.popup-text{
+    font-size:14px;
+    color:#fff;
+    letter-spacing:0.5px;
+    
+}
+.popup.hide {
+  opacity: 0;
+  transform: translate(-50%, -20px);
+  pointer-events: none;
+}
+
+
+/* Container */
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:60px 20px;
+    text-align:center;
+}
+
+/* ===== JUDUL ===== */
+.title{
+    font-size:42px;
+    font-weight:700;
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+
+    background:linear-gradient(90deg,#ff4f9a,#8f6cff);
+    background-clip:text;
+    color:transparent;
+}
+
+/* ICON MUSIK DI JUDUL */
+.title-icon{
+    font-size:38px;
+    color:#ff4f9a; /* warna icon beda dari teks */
+    filter: drop-shadow(0 0 10px rgba(255,79,154,.8));
+    animation: floatIcon 2.5s ease-in-out infinite;
+}
+
+@keyframes floatIcon{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-6px);
+    }
+}
+
+
+.subtitle{
+    margin-top:10px;
+    color:#bbb;
+}
+
+/* Cards */
+.cards{
+    margin-top:50px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.card{
+    background:#120916;
+    padding:40px;
+    border-radius:18px;
+    box-shadow:0 0 25px rgba(111, 53, 118, 0.6);
+    overflow: hidden;
+}
+
+.card.center{
+    transform:scale(1.05);
+}
+
+.album{
+    height:200px;
+    border-radius:15px;
+    overflow: hidden;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:50px;
+}
+
+.pink{background-image: url(musix/e.jpg);
+
+}
+.purple{background-image: url(musix/a.jpeg);
+
+}
+.red{background-image: url(musix/sency.jpeg);
+
+}
+
+h3{
+    margin-top:15px;
+}
+
+p{
+    color:#aaa;
+    font-size:14px;
+}
+
+/* Button */
+.play-btn{
+    margin-top:15px;
+    width:100%;
+    padding:10px;
+    border-radius:20px;
+    border:1px solid #ff4f9a;
+    background:transparent;
+    color:#ff4f9a;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.play-btn:hover,
+.play-btn.active{
+    background:#ff4f9a;
+    color:#000;
+}
+
+/* Falling Hearts */
+.hearts-container{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    overflow:hidden;
+}
+
+.heart{
+    position:absolute;
+    color:#ff4f9a;
+    font-size:20px;
+    animation:fall linear infinite;
+}
+
+@keyframes fall{
+    from{
+        transform:translateY(-10vh);
+        opacity:1;
+    }
+    to{
+        transform:translateY(110vh);
+        opacity:0;
+    }
+}
+
+/* Responsive */
+@media(max-width:900px){
+    .cards{
+        grid-template-columns:1fr;
+    }
+    .card.center{
+        transform:none;
+    }
+}
+
+/* BINTANG */
+.stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  filter: blur(0.3px);
+  animation: twinkle 3s infinite alternate;
+}
+
+@keyframes twinkle {
+  from { opacity: 0.2; }
+  to   { opacity: 1; }
+}
+
+section {
+  position: relative;
+  z-index: 0;
+}
+
+
+
+/* ================================== HALAMAN KE 3 ================================== */
+
+
+
+/* Wrapper */
+.story-wrapper{
+  width:100%;
+  max-width:1200px;
+  padding:80px 20px;
+}
+
+/* Header */
+.story-header{
+  text-align:center;
+  margin-bottom:60px;
+}
+
+.story-header h1{
+  font-size:48px;
+  font-weight:700;
+  background:linear-gradient(90deg,#ff4f9a,#8261ed);
+  background-clip:text;
+  color:transparent;
+   opacity:0;
+  transform:translateY(20px);
+  animation:titleIn 1.2s ease forwards;
+}
+
+@keyframes titleIn{
+  to{
+    opacity:1;
+    transform:translateY(0);
+    text-shadow:
+      0 0 12px rgba(255,255,255,.25),
+      0 0 25px rgba(255,79,154,.35);
+  }
+}
+
+
+
+.story-header p{
+  margin-top:12px;
+  color:#bbb;
+  font-size:15px;
+}
+
+/* Card */
+.story-card{
+  background:rgba(20,10,25,.85);
+  border-radius:26px;
+  padding:40px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  box-shadow:
+    0 0 40px rgba(255,79,154,.2),
+    inset 0 0 20px rgba(255,255,255,.03);
+}
+
+/* Left */
+.story-text{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.badge{
+  display:inline-block;
+  background:#2a122f;
+  color:#ff8bc7;
+  padding:6px 14px;
+  border-radius:20px;
+  font-size:13px;
+  width:max-content;
+  margin-bottom:20px;
+}
+
+.story-text h2{
+  font-size:34px;
+  margin-bottom:14px;
+}
+
+.story-text h2 span{
+  font-size:28px;
+}
+
+.desc{
+  color:#cfcfcf;
+  line-height:1.6;
+  max-width:420px;
+  margin-bottom:25px;
+}
+
+.meta{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  font-size:14px;
+  color:#aaa;
+}
+
+/* Right Image */
+.story-image{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.story-image img{
+  width:100%;
+  max-width:420px;
+  border-radius:20px;
+  box-shadow:0 0 30px rgba(255,79,154,.35);
+}
+
+/* Responsive */
+@media(max-width:900px){
+  .story-card{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .story-text{
+    align-items:center;
+  }
+
+  .desc{
+    max-width:100%;
+  }
+}
+
+
+
+/* ================================== HALAMAN 4 ================================== */
+
+
+
+/* ================================== HALAMAN 5 ================================== */
+
+
+
+/* ================================== HALAMAN 6 ================================== */
+
+.story-card.image-only {
+    background: rgba(29, 15, 36, 0.6);
+
+  padding: 18px ;                 /* ⬅️ WAJIB */
+  display: block;             /* ⬅️ matikan grid */
+  overflow: hidden;
+  border-radius: 30px;
+  animation: glowPulse 3s infinite alternate;
+}
+
+.story-card.image-only img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+
+@keyframes glowPulse {
+  0% {
+    box-shadow:
+      0 0 25px rgba(255, 77, 157, 0.35),
+      0 0 60px rgba(127, 0, 255, 0.2);
+  }
+  50% {
+    box-shadow:
+      0 0 45px rgba(255, 77, 157, 0.6),
+      0 0 100px rgba(127, 0, 255, 0.4);
+  }
+  100% {
+    box-shadow:
+      0 0 25px rgba(255, 77, 157, 0.35),
+      0 0 60px rgba(127, 0, 255, 0.2);
+  }
+}
+
+/* ================================== HALAMAN KE 7 ================================== */
+
+
+.closing-card {
+  width: 100%;
+  max-width: 1100px;
+  margin: 120px auto;
+  padding: 60px 70px;
+
+  background: rgba(20, 10, 25, 0.7);
+  border-radius: 30px;
+
+  box-shadow:
+    0 0 25px rgba(180, 70, 255, 0.35),
+    inset 0 0 25px rgba(180, 70, 255, 0.15);
+
+  border: 1px solid rgba(200, 100, 255, 0.25);
+
+  animation: glowPulse 4s infinite alternate;
+}
+
+/* Header */
+.closing-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.closing-header h2 {
+  font-size: 42px;
+  text-align: center;
+  line-height: 1.3;
+  font-weight: 700;
+
+  background: linear-gradient(
+    90deg,
+    #b45cff,
+    #e27cff,
+    #b45cff
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow:
+    0 0 15px rgba(180, 92, 255, 0.6),
+    0 0 30px rgba(226, 124, 255, 0.4);
+
+  animation: titleGlow 4s ease-in-out infinite;
+}
+
+
+/* Icons */
+.icon-left,
+.icon-right {
+  font-size: 48px;
+  filter: drop-shadow(0 0 12px rgba(255, 100, 200, 0.6));
+  animation: floatIcon 3s ease-in-out infinite;
+}
+
+.icon-right {
+  animation-delay: 1.5s;
+}
+
+/* Text */
+.closing-text {
+  font-size: 18px;
+  line-height: 1.9;
+  text-align: center;
+  color: #e6dff0;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Animations */
+@keyframes glowPulse {
+  from {
+    box-shadow:
+      0 0 18px rgba(180, 70, 255, 0.35),
+      inset 0 0 18px rgba(180, 70, 255, 0.12);
+  }
+  to {
+    box-shadow:
+      0 0 35px rgba(180, 70, 255, 0.55),
+      inset 0 0 28px rgba(180, 70, 255, 0.25);
+  }
+}
+
+@keyframes floatIcon {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes titleGlow {
+  0% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.25);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+
+/* <!-- ================================= HALAMAN 8 ==================================  --> */
+
+
+.final-section {
+  min-height: 100vh;
+  padding: 140px 20px 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 50px;
+}
+
+/* Judul */
+.final-title {
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #fff;
+}
+
+.final-title span {
+  color: #ff4f9a;
+  text-shadow: 0 0 20px rgba(255, 79, 154, 0.7);
+}
+
+/* Love Button */
+.love-button {
+  position: relative;
+  font-size: 90px;
+  text-decoration: none;
+  animation: heartBeat 1.8s infinite;
+  filter: drop-shadow(0 0 25px rgba(255, 79, 154, 0.7));
+  cursor: pointer;
+}
+
+/* Text "Click" */
+.love-text {
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 16px;
+  letter-spacing: 2px;
+  color: #ff9ecf;
+  text-shadow: 0 0 10px rgba(255, 158, 207, 0.7);
+}
+
+/* Hover */
+.love-button:hover {
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 40px rgba(255, 79, 154, 1));
+}
+
+/* Note */
+.final-note {
+  color: #aaa;
+  font-size: 14px;
+}
+
+/* Animasi detak jantung */
+@keyframes heartBeat {
+  0% { transform: scale(1); }
+  20% { transform: scale(1.15); }
+  40% { transform: scale(1); }
+  60% { transform: scale(1.12); }
+  80% { transform: scale(1); }
+}
+
+.made-with {
+  margin-top: 40px;
+  font-size: 12px;
+  color: #888;
+  letter-spacing: 1px;
+  opacity: 0.8;
+}
+
+.made-with span {
+  color: #ff4f9a;
+  font-weight: 600;
+}

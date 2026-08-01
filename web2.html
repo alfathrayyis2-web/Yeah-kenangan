@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Lagu Favorit Kita</title>
+    <link rel="stylesheet" href="web2.css">
+</head>
+<body>
+<div class="stars"></div>
+<!-- Popup -->
+    <div class="popup" id="popup">
+        <span class="popup-icon">🎵</span>
+        <span class="popup-text">Our Playlist</span>
+    </div>
+
+<!-- ================================== HALAMAN 2 ================================== -->
+
+<section class="section-center" id="playlist-section">
+
+<!-- Falling Hearts -->
+    <div class="hearts-container"></div>
+
+    <div class="container">
+        <h1 class="title">Lagu Favorit Kita<span class="title-icon">🎶</span>
+        </h1>
+    <p class="subtitle">Setiap lagu punya cerita dan kenangan tersendiri</p>
+
+    <div class="cards">
+
+    <div class="card">
+            <div class="album pink"></div>
+            <h3>Everything u are</h3>
+            <p>Hindia</p>
+            <button class="play-btn" onclick="playSong(0)">▶ Play Song</button>
+    </div>
+
+     <div class="card center">
+            <div class="album purple"></div>
+            <h3>A Thousand Years</h3>
+            <p>Christina Perri</p>
+            <button class="play-btn active" onclick="playSong(1)">⏸ Pause</button>
+    </div>
+
+    <div class="card">
+            <div class="album red"></div>
+            <h3>Sency</h3>
+            <p>Tenxi</p>
+            <button class="play-btn" onclick="playSong(2)">▶ Play Song</button>
+     </div>
+    </div>
+
+<!-- Audio -->
+<audio id="audio0" src="musix/everything u are song.mp3"></audio>
+<audio id="audio1" src="musix/a thousand years song.mp3"></audio>
+<audio id="audio2" src="musix/sency song.mp3"></audio>
+
+
+</section>
+
+
+<!-- ================================== HALAMAN 3 ================================== -->
+
+<section class="section-center" id="cerita-kita">
+    <div class="story-wrapper">
+
+<!-- Header -->
+    <div class="story-header">
+        <h1>Cerita Kita</h1>
+        <p>Setiap momen bersama adalah kenangan yang tidak akan pernah terlupakan</p>
+    </div>
+
+<!-- Story Card -->
+  <div class="story-card">
+
+<!-- Left Content -->
+    <div class="story-text">
+      <span class="badge">❤️ Kenangan #1</span>
+
+        <h2>Moment Firstdate <span>✨</span></h2>
+
+        <p class="desc">
+        Moment ini adalah saat di mana aku untuk pertama kalinya berani mengajak perempuan untuk ngedate bersama. Kala itu aku sangat canggung dan juga takut membuat kesalahan. Tetapi setelah menatapmu, aku yakin aku bisa untuk membuatmu tersenyum kala itu.</p>
+
+        <div class="meta">
+            <div>📅 19 Oktober 2024</div>
+            <div>📍 AEON Mall JGC</div>
+        </div>
+    </div>
+<!-- Right Image -->
+    <div class="story-image">
+    <img src="Gambar/firstdate.jpeg" alt="Cerita Kita">
+    </div>
+    </div>
+
+</section>
+
+
+
+
+<!-- ================================== HALAMAN 4 ================================== -->
+
+<section class="section-center" id="cerita-kita-2">
+    <div class="story-wrapper">
+
+      <div class="story-header placeholder"></div>
+
+<!-- Story Card -->
+  <div class="story-card">
+
+<!-- Left Image -->
+    <div class="story-image">
+    <img src="Gambar/photobooth.jpeg" alt="Cerita Kita">
+    </div>
+<!-- Right Content -->
+<div class="story-text">
+      <span class="badge">❤️ Kenangan #2</span>
+
+        <h2>Moment pertama kali kita Photobooth<span>💫</span></h2>
+
+        <p class="desc">
+        Saat itu aku masih canggung banget, masih sedikit jaga jarak dari kamu, karena aku ngga pernah beneran sedeket itu sama perempuan yang bener bener aku suka. Saat itu kamu terlihat sangat cantik sampai aku bingung harus berperilaku seperti apa</p>
+
+        <div class="meta">
+            <div>📅 13 Februari 2025</div>
+            <div>📍 SMAN 11</div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ================================== HALAMAN 5 ================================== -->
+
+<section class="section-center" id="cerita-kita-3">
+    <div class="story-wrapper">
+
+      <div class="story-header placeholder"></div>
+
+<!-- Story Card -->
+  <div class="story-card">
+
+<!-- Left Content -->
+    <div class="story-text">
+      <span class="badge">❤️ Kenangan #3</span>
+
+        <h2>Moment Yang Paling Menegangkan <span>💗</span></h2>
+
+        <p class="desc">
+        ‎Saat itu ialah Moment yang sangat membuat jantungku berdebar. Jujur, pada saat itu aku sangat bingung sekali untuk memilih antara bertahan pada hubungan pertemanan atau mencoba hal yang belum pernah aku coba sama sekali, yaitu berpacaran. Dan akhirnya aku memilih jalan yang kita sama sama belum tau hal hal apa yang akan terjadi setelah itu. Pada saat itu aku hanya berfikir, jika aku sudah berani mengambil jalan tersebut maka aku akan berusaha memberikan yang terbaik untuk kamu kedepannya.</p>
+
+        <div class="meta">
+            <div>📅 6 Januari 2025</div>
+            <div>📍 Mixue Pulogebang</div>
+        </div>
+    </div>
+<!-- Right Image -->
+    <div class="story-image">
+    <img src="Gambar/dagdigdugser.jpeg" alt="Cerita Kita">
+    </div>
+    </div>
+
+</section>
+
+
+
+<!-- ================================== HALAMAN 6 ================================== -->
+
+<section class="section-center" id="cerita-kita-4">
+  <div class="story-wrapper">
+    <div class="story-card image-only">
+      <img src="gambar kenangan/Happy 1st anniversary, sayang.png" alt="Cerita Kita">
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================== HALAMAN 7 ================================== -->
+
+<section class="story-section" id="closing-section">
+  <div class="closing-card">
+
+    <div class="closing-header">
+      <span class="icon-left">❤️</span>
+
+      <h2>
+        Terima Kasih untuk Satu<br>
+        Tahun yang Berarti
+      </h2>
+
+      <span class="icon-right">🎉</span>
+    </div>
+
+    <p class="closing-text">
+‎Yeyy🎉, happy anniversary sayang, tidak terasa sudah setahun kita bersama. Sudah banyak hal yang kita lalui bersama dari bertengkar, bercanda hingga menangis. Terima kasih karena telah hadir dalam kisah hidupku yang hampa ini. Setelah kehadiranmu dalam kehidupanku aku merasa hidupku menjadi lebih seru dan pantas untuk dijalani. Kamu adalah wanita terhebat nan kuat  yang pernah aku temui. Aku sangat bersyukur bisa mengenal dan membuat kenangan indah dalam hidupku bersamamu.
+‎
+‎Jangan memudar dulu ya rasa sayang maupun rasa sabar kamu terhadap aku. Walaupun aku masih banyak salah sama kamu aku harap kamu akan terus kuat sama aku. Karena aku akan terus mencoba sekuat aku dalam menjadi apa yang kamu inginkan.
+‎
+      <br><br>
+      ‎Aku akan terus mencintaimu baik kamu marah padaku, baik kamu benci aku, baik kamu melupakan aku, baik kamu merendahkan aku, aku akan selalu mencintaimu.
+‎
+‎Aku harap ini adalah awal perjalanan kita untuk mengukir lebih banyak lagi kenangan indah Dalam kisah hidup kita. Semoga kita akan terus bersama dalam menjalani kehidupan ini. Happy anniversary yaa sayang 🤍
+    </p>
+
+  </div>
+</section>
+
+
+<!-- ================================== HALAMAN 8 ==================================  -->
+
+<section class="final-section" id="final-section">
+  <h1 class="final-title">
+    Setiap kenangan kita<br>
+    tersimpan <span>di sini</span>,<br>
+    <span>selamanya</span>
+  </h1>
+
+  <a 
+    href="https://drive.google.com/drive/folders/1wwX1_hawUQgc0vtwnMuZlqWcz79vV-cC?usp=drive_link"
+    target="_blank"
+    class="love-button"
+  >
+    ❤️
+    <span class="love-text">Click</span>
+  </a>
+
+  <p class="final-note">
+    Terima kasih sudah menjadi bagian dari hidupku ❤️
+  </p>
+</section>
+
+
+<p class="made-with">
+  Made with <span>AI</span> for <span>Us</span>
+</p>
+
+<script src="web2.js"></script>
+</body>
+
+</html>
